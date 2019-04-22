@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { STRIDENavComponent } from './stridenav/stridenav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    STRIDENavComponent
   ],
   imports: [
     BrowserModule
