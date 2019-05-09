@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { strideVal } from '../strideVal';
+import results from '../../assets/results.json';
 
 @Component({
   selector: 'app-stridenav',
@@ -9,6 +10,14 @@ import { strideVal } from '../strideVal';
 export class STRIDENavComponent implements OnInit {
   flag = 'STRIDENav works!'
   imgURL = '../../assets/'
+
+
+  spoofingVI = results['Spoofing']
+  tamperingVI = results['Tampering']
+  repudiationVI = results['Repudiation']
+  informationVI = results['InformationDisclosure']
+  denialVI = results['DenialOfService']
+  elevationVI = results['ElevationOfPrivilege']
 
   strideVal: strideVal = {
     spoofing: 0,
@@ -28,7 +37,10 @@ export class STRIDENavComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor() { 
+    console.log('Reading local json files');
+    console.log(results);
+  }
 
   ngOnInit() {
   }
