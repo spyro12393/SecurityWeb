@@ -6,3 +6,5 @@ export class strideVal {
     denial: number;
     elevation: number;
 }
+
+//let ans = strideVal.spoofing * 5;

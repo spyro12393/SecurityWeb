@@ -12,6 +12,7 @@ export class STRIDENavComponent implements OnInit {
   imgURL = '../../assets/'
 
 
+  // Results after Ontology Rules.
   spoofingVI = results['Spoofing']
   tamperingVI = results['Tampering']
   repudiationVI = results['Repudiation']
@@ -19,6 +20,7 @@ export class STRIDENavComponent implements OnInit {
   denialVI = results['DenialOfService']
   elevationVI = results['ElevationOfPrivilege']
 
+  // Weights of user inputs.
   strideVal: strideVal = {
     spoofing: 0,
     tampering: 0,
@@ -27,6 +29,10 @@ export class STRIDENavComponent implements OnInit {
     denial: 0,
     elevation: 0
   }
+
+  
+
+  
 
   strideScale = [
     { id: 1, name: '極不重要', value: 0.00 },
@@ -40,6 +46,26 @@ export class STRIDENavComponent implements OnInit {
   constructor() { 
     console.log('Reading local json files');
     console.log(results);
+  }
+
+  // Calculate weight
+  get W_spoofingVI(){
+    return this.spoofingVI * this.strideVal.spoofing;
+  }
+  get W_tamperingVI(){
+    return this.tamperingVI * this.strideVal.tampering;
+  }
+  get W_repudiationVI(){
+    return this.repudiationVI * this.strideVal.repudiation;
+  }
+  get W_informationVI(){
+    return this.informationVI * this.strideVal.information;
+  }
+  get W_denialVI(){
+    return this.denialVI * this.strideVal.denial;
+  }
+  get W_elevationVI(){
+    return this.elevationVI * this.strideVal.elevation;
   }
 
   ngOnInit() {
