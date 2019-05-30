@@ -1,3 +1,39 @@
-<p>
-  results works!
-</p>
+<div>
+  <ul class="list-group">
+      <li class="list-group-item">- Refactoring Suggestions -</li>
+      <li><span>Spoofing</span></li>
+      <li *ngFor="let ref_s of ref_spoofing" class="list-group-item">
+        {{ref_s}}
+      </li>
+
+      <li><span>Tampering</span></li>
+      <li *ngFor="let ref_t of ref_tampering" class="list-group-item">
+        {{ref_t}}
+      </li>
+
+      <li><span>Repudiation</span></li>
+      <li *ngFor="let ref_r of ref_repudiation" class="list-group-item">
+        {{ref_r}}
+      </li>
+
+      <li><span>Information Disclosure</span></li>
+      <li *ngFor="let ref_i of ref_information" class="list-group-item">
+        {{ref_i}}
+      </li>
+
+      <li><span>Denial of Service</span></li>
+      <li *ngFor="let ref_d of ref_denial" class="list-group-item">
+        {{ref_d}}
+      </li>
+
+      <li><span>Elevation of Privilege</span></li>
+      <li *ngFor="let ref_e of ref_elevation" class="list-group-item">
+        {{ref_e}}
+      </li>
+
+    </ul>
+</div>
+
+<div class="alert alert-danger" role="alert">
+    Total Vulnerability Index (TVI): {{TVI}}
+</div>

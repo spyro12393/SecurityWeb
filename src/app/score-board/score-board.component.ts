@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { strideVal } from '../strideVal';
-import * as results from '../../assets/results.json';
 import { CalcService } from '../service/calc.service';
 
 @Component({
@@ -65,6 +63,30 @@ export class ScoreBoardComponent implements OnInit {
 
   set w_elevation(value: number){
     this.calc.w_elevation = value;
+  }
+
+  // Calculate weight
+  get W_spoofingVI(){
+    return this.spoofingVI * this.w_spoofing;
+  }
+  get W_tamperingVI(){
+    return this.tamperingVI * this.w_tampering;
+  }
+  get W_repudiationVI(){
+    return this.repudiationVI * this.w_repudiation;
+  }
+  get W_informationVI(){
+    return this.informationVI * this.w_information;
+  }
+  get W_denialVI(){
+    return this.denialVI * this.w_denial;
+  }
+  get W_elevationVI(){
+    return this.elevationVI * this.w_elevation;
+  }
+
+  get TVI(){
+    return this.w_denial + this.w_elevation + this.w_information + this.w_repudiation + this.w_spoofing + this.w_tampering;
   }
 
   constructor(public calc:CalcService) { 

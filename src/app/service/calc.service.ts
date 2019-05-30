@@ -8,13 +8,15 @@ import { strideVal } from '../strideVal';
 export class CalcService {
 
   serviceData: string;
-  
+
   w_spoofing: number = 0;
   w_tampering: number = 0;
   w_repudiation: number = 0;
   w_information: number = 0;
   w_denial: number = 0;
   w_elevation: number = 0;
+
+  TVI: number = 0;
 
   // Weights of user inputs.
   strideVal: strideVal = {
@@ -34,25 +36,14 @@ export class CalcService {
    denialVI = results.DenailOfService[0].VI
    elevationVI = results.ElevationOfPrivilege[0].VI
 
-  // get W_spoofingVI(){
-  //   return this.spoofingVI * this.strideVal.spoofing;
-  // }
-  // get W_tamperingVI(){
-  //   return this.tamperingVI * this.strideVal.tampering;
-  // }
-  // get W_repudiationVI(){
-  //   return this.repudiationVI * this.strideVal.repudiation;
-  // }
-  // get W_informationVI(){
-  //   return this.informationVI * this.strideVal.information;
-  // }
-  // get W_denialVI(){
-  //   return this.denialVI * this.strideVal.denial;
-  // }
-  // get W_elevationVI(){
-  //   return this.elevationVI * this.strideVal.elevation;
-  // }
 
+   // Initializing refactoring.
+   ref_spoofing = results.Spoofing[0].Refactor;
+   ref_tampering = results.Tampering[0].Refactor;
+   ref_repudiation = results.Repudiation[0].Refactor;
+   ref_information = results.InformationDisclosure[0].Refactor;
+   ref_denial = results.DenailOfService[0].Refactor;
+   ref_elevation = results.ElevationOfPrivilege[0].Refactor;
 
   constructor() { }
 }

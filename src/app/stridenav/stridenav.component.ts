@@ -92,26 +92,6 @@ export class STRIDENavComponent implements OnInit {
     alert('Done.');
   }
 
-  // // Calculate weight
-  // get W_spoofingVI(){
-  //   return this.spoofingVI * this.strideVal.spoofing;
-  // }
-  // get W_tamperingVI(){
-  //   return this.tamperingVI * this.strideVal.tampering;
-  // }
-  // get W_repudiationVI(){
-  //   return this.repudiationVI * this.strideVal.repudiation;
-  // }
-  // get W_informationVI(){
-  //   return this.informationVI * this.strideVal.information;
-  // }
-  // get W_denialVI(){
-  //   return this.denialVI * this.strideVal.denial;
-  // }
-  // get W_elevationVI(){
-  //   return this.elevationVI * this.strideVal.elevation;
-  // }
-
   ngOnInit() {
   }
 
