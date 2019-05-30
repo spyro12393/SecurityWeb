@@ -1,1 +1,43 @@
-{"InformationDisclosure":9,"Tampering":17,"Repudiation":0,"ElevationOfPrivilege":8,"Spoofing":2,"DenialOfService":0}
+{
+    "InformationDisclosure": [
+        {
+            "VI": 1,
+            "Refactor": []
+        }
+    ],
+    "Tampering": [
+        {
+            "VI": 9,
+            "Refactor": []
+        }
+    ],
+    "Repudiation": [
+        {
+            "VI": 0,
+            "Refactor": []
+        }
+    ],
+    "ElevationOfPrivilege": [
+        {
+            "VI": 8,
+            "Refactor": []
+        }
+    ],
+    "DenailOfService": [
+        {
+            "VI": 0,
+            "Refactor": []
+        }
+    ],
+    "Spoofing": [
+        {
+            "VI": 2,
+            "Refactor": [
+                "[Encrypt] Class: <PasswordNoEncrypt> contains Password but hasn't been Encrypted.",
+                "[Encrypt] Class: <BananaB> contains Password but hasn't been Encrypted.",
+                "[Encrypt] Class: <BananaA> contains Password but hasn't been Encrypted.",
+                "[Similarity]: Class: <BananaB> and <BananaA>. Similarity: 0.8571428571428571 is higher than 0.7."
+            ]
+        }
+    ]
+}

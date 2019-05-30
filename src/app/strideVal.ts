@@ -7,4 +7,4 @@ export class strideVal {
     elevation: number;
 }
 
-//let ans = strideVal.spoofing * 5;
+// let ans = strideVal.spoofing * 5;

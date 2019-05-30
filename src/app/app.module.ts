@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { STRIDENavComponent } from './stridenav/stridenav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResultsComponent } from './results/results.component';
+import { MainnavbarComponent } from './mainnavbar/mainnavbar.component';
+import { ScoreBoardComponent } from './score-board/score-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     STRIDENavComponent,
-    ResultsComponent
+    ResultsComponent,
+    MainnavbarComponent,
+    ScoreBoardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,283 +1,48 @@
-<div class="col-md-6" style="margin:0px auto">
-  <table class="table table-md">
-    <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">STRIDE Catagory</th>
-          <th scope="col">Vulnerable Index</th>
-          <th scope="col">Weight</th>
-          <th scope="col">W * VI</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Spoofing</td>
-          <td>{{spoofingVI}}</td>
-          <td>{{strideVal.spoofing}}</td>
-          <td>{{W_spoofingVI}}</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Tampering</td>
-          <td>{{tamperingVI}}</td>
-          <td>{{strideVal.tampering}}</td>
-          <td>{{W_tamperingVI}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Repudiation</td>
-          <td>{{repudiationVI}}</td>
-          <td>{{strideVal.repudiation}}</td>
-          <td>{{W_repudiationVI}}</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Information disclosure</td>
-            <td>{{informationVI}}</td>
-            <td>{{strideVal.information}}</td>
-            <td>{{W_informationVI}}</td>
-          </tr>
-       <tr>
-          <th scope="row">5</th>
-          <td>Denial of Service</td>
-          <td>{{denialVI}}</td>
-          <td>{{strideVal.denial}}</td>
-          <td>{{W_denialVI}}</td>
-        </tr>  
-       <tr>
-          <th scope="row">6</th>
-          <td>Elevation of Privilege</td>
-          <td>{{elevationVI}}</td>
-          <td>{{strideVal.elevation}}</td>
-          <td>{{W_elevationVI}}</td>
-        </tr>    
-      </tbody>
-    </table>
-</div>
-
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-4">
-    <table class="table table-responsive table-borderless">
-      <thead>
-        <tr>
-          <th scope="col">#1</th>
-          <th scope="col">Category</th>
-          <th scope="col">Prefer Weights</th>
-          <th scope="col">Weight Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Spoofing</td>
-          <td><input [(ngModel)]="strideVal.spoofing" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.spoofing}}</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Tampering</td>
-          <td><input [(ngModel)]="strideVal.tampering" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.tampering}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Repudiation</td>
-          <td><input [(ngModel)]="strideVal.repudiation" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.repudiation}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Information Disclosure</td>
-          <td><input [(ngModel)]="strideVal.information" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.information}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Denial of Service</td>
-          <td><input [(ngModel)]="strideVal.denial" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.denial}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Elevation of Privilege</td>
-          <td><input [(ngModel)]="strideVal.elevation" type="range"  value="0" step="1" max="5"/></td>
-          <td>{{strideVal.elevation}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="col-md-4">
-      <table class="table table-responsive table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Category</th>
-              <th scope="col">Prefer Weights</th>
-              <th scope="col">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Spoofing Weight:</td>
-              <td><input [(ngModel)]="strideVal.spoofing" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.spoofing}}</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Tampering Weight:</td>
-              <td><input [(ngModel)]="strideVal.tampering" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.tampering}}</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Repudiation Weight:</td>
-              <td><input [(ngModel)]="strideVal.repudiation" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.repudiation}}</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Information Disclosure Weight:</td>
-              <td><input [(ngModel)]="strideVal.information" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.information}}</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Denial of Service Weight:</td>
-              <td><input [(ngModel)]="strideVal.denial" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.denial}}</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Elevation of Privilege Weight:</td>
-              <td><input [(ngModel)]="strideVal.elevation" type="range"  value="0" step="1" max="5"/></td>
-              <td>{{strideVal.elevation}}</td>
-            </tr>
-          </tbody>
-        </table>
-  </div>
-</div>
-
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm" style="width:18rem">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Spoofing</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/S.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Spoofing - 欺騙<br/></p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.spoofing" type="range"  value="0" step="1" max="5"/> {{strideVal.spoofing}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Tampering</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/T.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Tampering - 竄改</p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.tampering" type="range"  value="0" step="1" max="5"/> {{strideVal.tampering}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Repudiation</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/R.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Repudiation - 否認</p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.repudiation" type="range"  value="0" step="1" max="5"/> {{strideVal.repudiation}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Information disclosure</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/I.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Information disclosure - 資訊接露</p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.information" type="range"  value="0" step="1" max="5"/> {{strideVal.information}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Denial of Service</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/D.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Denial of Service - 拒絕服務</p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.denial" type="range"  value="0" step="1" max="5"/> {{strideVal.denial}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Elevation of privilge</title><rect width="100%" height="100%" fill="#55595c"/><image xlink:href="../../assets/E.jpg" width="100%" height="100%"/></svg>
-        <div class="card-body">
-          <p class="card-text">Elevation of privilge - 提升權限</p>
-          <div>
-              <label>Weight: <br> </label> <input [(ngModel)]="strideVal.elevation" type="range"  value="0" step="1" max="5"/> {{strideVal.elevation}}
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="btn btn-outline-success btn-block">Submit</button>
-  </div>
--->
-
-  
+<table class="table table-responsive table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#1</th>
+      <th scope="col">Category</th>
+      <th scope="col">Prefer Weights</th>
+      <th scope="col">Weight Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Spoofing</td>
+      <td><input [(ngModel)]="strideVal.spoofing" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.spoofing}}</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Tampering</td>
+      <td><input [(ngModel)]="strideVal.tampering" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.tampering}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Repudiation</td>
+      <td><input [(ngModel)]="strideVal.repudiation" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.repudiation}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Information Disclosure</td>
+      <td><input [(ngModel)]="strideVal.information" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.information}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Denial of Service</td>
+      <td><input [(ngModel)]="strideVal.denial" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.denial}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Elevation of Privilege</td>
+      <td><input [(ngModel)]="strideVal.elevation" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{strideVal.elevation}}</td>
+    </tr>
+  </tbody>
+</table>

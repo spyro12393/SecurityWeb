@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { strideVal } from '../strideVal';
-import results from '../../assets/results.json';
+import * as results from '../../assets/results.json';
 
 @Component({
   selector: 'app-stridenav',
@@ -13,13 +13,12 @@ export class STRIDENavComponent implements OnInit {
 
 
   // Results after Ontology Rules.
-  spoofingVI = results['Spoofing']
-  tamperingVI = results['Tampering']
-  repudiationVI = results['Repudiation']
-  informationVI = results['InformationDisclosure']
-  denialVI = results['DenialOfService']
-  elevationVI = results['ElevationOfPrivilege']
-
+  spoofingVI = results.Spoofing[0].VI
+  tamperingVI = results.Tampering[0].VI
+  repudiationVI = results.Repudiation[0].VI
+  informationVI = results.InformationDisclosure[0].VI
+  denialVI = results.DenailOfService[0].VI
+  elevationVI = results.ElevationOfPrivilege[0].VI
   // Weights of user inputs.
   strideVal: strideVal = {
     spoofing: 0,
@@ -46,6 +45,7 @@ export class STRIDENavComponent implements OnInit {
   constructor() { 
     console.log('Reading local json files');
     console.log(results);
+
   }
 
   // Calculate weight
