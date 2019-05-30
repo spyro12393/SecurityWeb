@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ResultsComponent } from './results/results.component';
 import { MainnavbarComponent } from './mainnavbar/mainnavbar.component';
 import { ScoreBoardComponent } from './score-board/score-board.component';
+import { CalcService } from './service/calc.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ScoreBoardComponent } from './score-board/score-board.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CalcService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

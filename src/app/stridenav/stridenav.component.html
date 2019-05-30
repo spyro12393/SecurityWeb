@@ -11,38 +11,46 @@
     <tr>
       <th scope="row">1</th>
       <td>Spoofing</td>
-      <td><input [(ngModel)]="strideVal.spoofing" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.spoofing}}</td>
+      <td><input [(ngModel)]="w_spoofing" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_spoofing}}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Tampering</td>
-      <td><input [(ngModel)]="strideVal.tampering" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.tampering}}</td>
+      <td><input [(ngModel)]="w_tampering" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_tampering}}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Repudiation</td>
-      <td><input [(ngModel)]="strideVal.repudiation" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.repudiation}}</td>
+      <td><input [(ngModel)]="w_repudiation" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_repudiation}}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Information Disclosure</td>
-      <td><input [(ngModel)]="strideVal.information" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.information}}</td>
+      <td><input [(ngModel)]="w_information" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_information}}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Denial of Service</td>
-      <td><input [(ngModel)]="strideVal.denial" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.denial}}</td>
+      <td><input [(ngModel)]="w_denial" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_denial}}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Elevation of Privilege</td>
-      <td><input [(ngModel)]="strideVal.elevation" type="range"  value="0" step="1" max="5"/></td>
-      <td>{{strideVal.elevation}}</td>
+      <td><input [(ngModel)]="w_elevation" type="range"  value="0" step="1" max="5"/></td>
+      <td>{{w_elevation}}</td>
     </tr>
   </tbody>
 </table>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-6">
+    <button (click)="Submit()" type="button" class="btn btn-success">Submit</button>
+  </div>
+</div>
+
