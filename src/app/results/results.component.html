@@ -1,39 +1,41 @@
-<div>
-  <ul class="list-group">
-      <li class="list-group-item">- Refactoring Suggestions -</li>
-      <li><span>Spoofing</span></li>
-      <li *ngFor="let ref_s of ref_spoofing" class="list-group-item">
-        {{ref_s}}
-      </li>
+<div class="alert alert-dark" role="alert">
+  <h3>Refactoring Suggestions:</h3>
+  <hr>
+  <div>
+    <ul class="list-group">
+        <li><span><h5>Spoofing</h5></span></li>
+        <li *ngFor="let ref_s of ref_spoofing" class="list-group-item">
+          {{ref_s}}
+        </li>
 
-      <li><span>Tampering</span></li>
-      <li *ngFor="let ref_t of ref_tampering" class="list-group-item">
-        {{ref_t}}
-      </li>
+        <li><span><h5>Tampering</h5></span></li>
+        <li *ngFor="let ref_t of ref_tampering" class="list-group-item">
+          {{ref_t}}
+        </li>
 
-      <li><span>Repudiation</span></li>
-      <li *ngFor="let ref_r of ref_repudiation" class="list-group-item">
-        {{ref_r}}
-      </li>
+        <li><span><h5>Repudiation</h5></span></li>
+        <li *ngFor="let ref_r of ref_repudiation" class="list-group-item">
+          {{ref_r}}
+        </li>
 
-      <li><span>Information Disclosure</span></li>
-      <li *ngFor="let ref_i of ref_information" class="list-group-item">
-        {{ref_i}}
-      </li>
+        <li><span><h5>Information Disclosure</h5></span></li>
+        <li *ngFor="let ref_i of ref_information" class="list-group-item">
+          {{ref_i}}
+        </li>
 
-      <li><span>Denial of Service</span></li>
-      <li *ngFor="let ref_d of ref_denial" class="list-group-item">
-        {{ref_d}}
-      </li>
+        <li><span><h5>Denial of Service</h5></span></li>
+        <li *ngFor="let ref_d of ref_denial" class="list-group-item">
+          {{ref_d}}
+        </li>
 
-      <li><span>Elevation of Privilege</span></li>
-      <li *ngFor="let ref_e of ref_elevation" class="list-group-item">
-        {{ref_e}}
-      </li>
+        <li><span><h5>Elevation of Privilege</h5></span></li>
+        <li *ngFor="let ref_e of ref_elevation" class="list-group-item">
+          {{ref_e}}
+        </li>
 
-    </ul>
+      </ul>
+  </div>
 </div>
-
-<div class="alert alert-danger" role="alert">
+<!-- <div class="alert alert-danger" role="alert">
     Total Vulnerability Index (TVI): {{TVI}}
-</div>
+</div> -->

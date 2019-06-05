@@ -9,12 +9,12 @@ export class CalcService {
 
   serviceData: string;
 
-  w_spoofing: number = 0;
-  w_tampering: number = 0;
-  w_repudiation: number = 0;
-  w_information: number = 0;
-  w_denial: number = 0;
-  w_elevation: number = 0;
+  w_spoofing: number = 3;
+  w_tampering: number = 3;
+  w_repudiation: number = 3;
+  w_information: number = 3;
+  w_denial: number = 3;
+  w_elevation: number = 3;
 
   TVI: number = 0;
 

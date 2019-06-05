@@ -65,6 +65,75 @@ export class ScoreBoardComponent implements OnInit {
     this.calc.w_elevation = value;
   }
 
+  // Normalization
+  // stride: Array<{name:string, value:number}> = [];
+  stride = [];
+  get s_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+
+    let norm = (this.spoofingVI * this.w_spoofing - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
+  get t_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+
+    let norm = (this.tamperingVI * this.w_tampering - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
+  get r_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+
+    let norm = (this.repudiationVI * this.w_repudiation - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
+  get i_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+    
+    let norm = (this.informationVI * this.w_information - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
+  get d_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+    
+    let norm = (this.denialVI * this.w_denial - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
+  get e_norm(){
+    let val = [this.spoofingVI * this.w_spoofing, this.tamperingVI * this.w_tampering, this.repudiationVI * this.w_repudiation, this.informationVI * this.w_information, this.denialVI * this.w_denial, this.elevationVI * this.w_elevation];
+    let rs = val.sort((a,b)=>{
+      return b - a;
+    });
+    
+    let norm = (this.elevationVI * this.w_elevation - rs[5]) / (rs[0] - rs[5]);
+
+    return Math.round(norm * 10) / 10;
+  }
+
   // Calculate weight
   get W_spoofingVI(){
     return this.spoofingVI * this.w_spoofing;
@@ -86,7 +155,8 @@ export class ScoreBoardComponent implements OnInit {
   }
 
   get TVI(){
-    return this.w_denial + this.w_elevation + this.w_information + this.w_repudiation + this.w_spoofing + this.w_tampering;
+    return this.spoofingVI * this.w_spoofing + this.tamperingVI * this.w_tampering + this.repudiationVI * this.w_repudiation + 
+    this.informationVI * this.w_information + this.denialVI * this.w_denial + this.elevationVI * this.w_elevation;
   }
 
   constructor(public calc:CalcService) { 
