@@ -9,6 +9,7 @@ import { ResultsComponent } from './results/results.component';
 import { MainnavbarComponent } from './mainnavbar/mainnavbar.component';
 import { ScoreBoardComponent } from './score-board/score-board.component';
 import { CalcService } from './service/calc.service';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CalcService } from './service/calc.service';
     STRIDENavComponent,
     ResultsComponent,
     MainnavbarComponent,
-    ScoreBoardComponent
+    ScoreBoardComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,

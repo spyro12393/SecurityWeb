@@ -76,7 +76,7 @@ export class ScoreBoardComponent implements OnInit {
 
     let norm = (this.spoofingVI * this.w_spoofing - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   get t_norm(){
@@ -87,7 +87,7 @@ export class ScoreBoardComponent implements OnInit {
 
     let norm = (this.tamperingVI * this.w_tampering - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   get r_norm(){
@@ -98,7 +98,7 @@ export class ScoreBoardComponent implements OnInit {
 
     let norm = (this.repudiationVI * this.w_repudiation - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   get i_norm(){
@@ -109,7 +109,7 @@ export class ScoreBoardComponent implements OnInit {
     
     let norm = (this.informationVI * this.w_information - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   get d_norm(){
@@ -120,7 +120,7 @@ export class ScoreBoardComponent implements OnInit {
     
     let norm = (this.denialVI * this.w_denial - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   get e_norm(){
@@ -131,7 +131,7 @@ export class ScoreBoardComponent implements OnInit {
     
     let norm = (this.elevationVI * this.w_elevation - rs[5]) / (rs[0] - rs[5]);
 
-    return Math.round(norm * 10) / 10;
+    return Math.round(norm * 100) / 100;
   }
 
   // Calculate weight

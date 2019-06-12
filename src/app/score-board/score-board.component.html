@@ -4,7 +4,8 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">STRIDE</th>
-            <th scope="col">VI</th>
+            <th scope="col">NV</th>
+            <!-- <th scope="col">Coverage</th> -->
             <th scope="col">W</th>
             <th scope="col">W * VI</th>
             <th scope="col">Normalize</th>
@@ -15,6 +16,7 @@
             <th scope="row">1</th>
             <td>Spoofing</td>
             <td>{{spoofingVI}}</td>
+            <!-- <td></td> -->
             <td>{{w_spoofing}}</td>
             <td>{{W_spoofingVI}}</td>
             <td>{{s_norm}}</td>
@@ -23,46 +25,52 @@
             <th scope="row">2</th>
             <td>Tampering</td>
             <td>{{tamperingVI}}</td>
+            <!-- <td></td> -->
             <td>{{w_tampering}}</td>
             <td>{{W_tamperingVI}}</td>
-            <td>{{t_norm | number:0}}</td>
+            <td>{{t_norm}}</td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Repudiation</td>
             <td>{{repudiationVI}}</td>
+            <!-- <td></td> -->
             <td>{{w_repudiation}}</td>
             <td>{{W_repudiationVI}}</td>
-            <td>{{r_norm | number:0}}</td>
+            <td>{{r_norm}}</td>
           </tr>
           <tr>
               <th scope="row">4</th>
               <td>Information disclosure</td>
               <td>{{informationVI}}</td>
+              <!-- <td></td> -->
               <td>{{w_information}}</td>
               <td>{{W_informationVI}}</td>
-              <td>{{i_norm | number:0}}</td>
+              <td>{{i_norm}}</td>
             </tr>
          <tr>
             <th scope="row">5</th>
             <td>Denial of Service</td>
             <td>{{denialVI}}</td>
+            <!-- <td></td> -->
             <td>{{w_denial}}</td>
             <td>{{W_denialVI}}</td>
-            <td>{{d_norm | number:0}}</td>
+            <td>{{d_norm}}</td>
           </tr>  
          <tr>
             <th scope="row">6</th>
             <td>Elevation of Privilege</td>
             <td>{{elevationVI}}</td>
+            <!-- <td></td> -->
             <td>{{w_elevation}}</td>
             <td>{{W_elevationVI}}</td>
-            <td>{{e_norm | number:0}}</td>
+            <td>{{e_norm}}</td>
           </tr>  
           <tr>
             <th scope="row">*</th>
             <td>Results in Total</td>
             <td></td>
+            <!-- <td></td> -->
             <td></td>
             <td>TVI: {{TVI}}</td>
           </tr>

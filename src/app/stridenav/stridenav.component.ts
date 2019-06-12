@@ -90,6 +90,7 @@ export class STRIDENavComponent implements OnInit {
 
   Submit(calc:CalcService){
     alert('Done.');
+    
   }
 
   ngOnInit() {
