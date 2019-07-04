@@ -1,1 +1,57 @@
-{"InformationDisclosure":[{"VI":1,"Refactor":["[Encrypt] Class: <PasswordNoEncrypt> contains Password but hasn't been Encrypted."]}],"Tampering":[{"VI":9,"Refactor":["[Encrypt] Class: <PasswordNoEncrypt> contains Password but hasn't been Encrypted.","[ServiceMethod] Class: <FirstBananaA> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <calSimilarity> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <BananaB> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <MainTest> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <B> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <cohJena> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <C> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <EncryptExample> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <A> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <PasswordNoEncrypt> doesn't have any service method (eg. Get or Set) for var access."]}],"Repudiation":[{"VI":1,"Refactor":["[Log] Package <fixSecureTest> doesn't exist a Log related class."]}],"ElevationOfPrivilege":[{"VI":8,"Refactor":["[ServiceMethod] Class: <FirstBananaA> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <calSimilarity> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <BananaB> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <MainTest> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <B> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <cohJena> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <C> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <EncryptExample> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <A> doesn't have any service method (eg. Get or Set) for var access.","[ServiceMethod] Class: <PasswordNoEncrypt> doesn't have any service method (eg. Get or Set) for var access."]}],"DenailOfService":[{"VI":0,"Refactor":["[Repeative] Class <B> and Class <C> has repeative attributes and methods. Consider inheritance."]}],"Spoofing":[{"VI":0,"Refactor":["[Similarity] Class: <B> and <B>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <EncryptExample> and <EncryptExample>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <A> and <A>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <cohJena> and <cohJena>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <MainTest> and <MainTest>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <PasswordNoEncrypt> and <PasswordNoEncrypt>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <BananaB> and <BananaA>. Similarity: 0.8571428571428571 is higher than 0.7.","[Similarity] Class: <BananaB> and <BananaB>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <calSimilarity> and <calSimilarity>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <C> and <C>. Similarity: 1.0 is higher than 0.7.","[Similarity] Class: <BananaA> and <BananaB>. Similarity: 0.8571428571428571 is higher than 0.7."]}]}
+{
+    "InformationDisclosure": [
+        {
+            "VI": 1,
+            "Refactor": [
+                "[Encrypt] Class: <LoginForm> contains Password but hasn't been Encrypted."
+            ]
+        }
+    ],
+    "Tampering": [
+        {
+            "VI": 6,
+            "Refactor": [
+                "[Encrypt] Class: <LoginForm> contains Password but hasn't been Encrypted.",
+                "[ServiceMethod] Class: <ButtonPanel> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <DonateDialog> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <Transport> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <ActionJList> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <LicenseDialog> doesn't have any service method (eg. Get or Set) for var access."
+            ]
+        }
+    ],
+    "Repudiation": [
+        {
+            "VI": 1,
+            "Refactor": [
+                "[Log] Package <com.projity.dialog> doesn't exist a Log related class."
+            ]
+        }
+    ],
+    "ElevationOfPrivilege": [
+        {
+            "VI": 5,
+            "Refactor": [
+                "[ServiceMethod] Class: <ButtonPanel> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <Transport> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <DonateDialog> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <ActionJList> doesn't have any service method (eg. Get or Set) for var access.",
+                "[ServiceMethod] Class: <LicenseDialog> doesn't have any service method (eg. Get or Set) for var access."
+            ]
+        }
+    ],
+    "DenailOfService": [
+        {
+            "VI": 2,
+            "Refactor": ["[Repeative] Class <LoginForm> and <de_LoginForm> are nearly the same. Please consider inheritance."]
+        }
+    ],
+    "Spoofing": [
+        {
+            "VI": 2,
+            "Refactor": [
+                "[Similarity] Class: <Accounts> and <Account>. Similarity: 0.875 is higher than 0.7."
+            ]
+        }
+    ]
+}
